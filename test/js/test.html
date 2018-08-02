@@ -41,6 +41,13 @@
     assert.equal(getScore(), 0);
   });
 
+  QUnit.test("backspace dot returns 0 score", function( assert )) {
+    enter('1');
+    enter('.');
+    backspace();
+    assert.equal(getScore(),1);
+  }
+
 
   function getScore() {
     return document.getElementById('score').innerHTML;
